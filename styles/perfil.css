@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/1200x/3b/49/9c/3b499c48ec0708a669ce1623a4f670a9.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.perfil-container {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2111);
+  margin-top: 70px;
+
+}
+
+.perfil-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -75px;
+}
+
+.perfil-imagem {
+  width: 150px;
+  height: 150px;
+  background-color: #111;
+  background-image: url("../img/user_generico.png");
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 240, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.5), 0 0 40px rgba(0, 247, 255, 0.3), 0 0 60px rgba(0, 247, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0px rgba(0, 240, 255, 0);
+  }
+}
+
+.perfil-imagem {
+  animation: pulse 5s infinite;
+}
+
+form {
+  margin-top: 30px;
+}
+
+fieldset {
+  border: none;
+  padding: 0 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.linha>div {
+  flex: 1;
+  min-width: 200px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+}
