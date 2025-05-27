@@ -45,7 +45,6 @@
 
 .intro-transicao {
     position: relative;
-    /* o margin está feito assim para ficar igual no Edge e no Chrome */
     width: 100vw;
     height: 80px;
     margin-left: -15px;
@@ -55,7 +54,6 @@
 
 .receitas-section {
     position: relative;
-    overflow: hidden;
 }
 
 .mais-populares-container {

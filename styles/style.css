@@ -240,6 +240,10 @@ select:focus {
 
 #usuario-botao p {
     margin: 0;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .usuario-menu {
@@ -290,7 +294,7 @@ select:focus {
     padding: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
     nav {
         flex-direction: column;
         align-items: center;
@@ -311,7 +315,6 @@ select:focus {
     }
 
     nav {
-        /* display: none; */
         opacity: 0;
         pointer-events: none;
         flex-direction: column;
@@ -332,5 +335,9 @@ select:focus {
         display: flex;
         opacity: 1;
         pointer-events: unset;
+    }
+
+    #usuario-botao p {
+        max-width: 90vw;
     }
 }

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Receitas - DrinksPlus</title>
-        <link rel="stylesheet" href="./styles/reset.css">
-        <link rel="stylesheet" href="./styles/style.css">
-        <link rel="stylesheet" href="./styles/receitas.css">
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/receitas.css" />
         <script src="./js/header.js" defer></script>
         <script src="./js/api.js" defer></script>
     </head>
-    <body onload="renderizarDrinks()">>
+    <body onload="renderizarDrinks()">
+        >
         <header class="borda-neon-azul">
             <div class="menu-container max-width">
                 <a href="index.html" class="logo">
@@ -40,17 +41,20 @@
                 </nav>
             </div>
         </header>
-        <main id="receitas" class="receitas-section">
-            <div class="busca-receitas-container max-width">
-                <form onsubmit="pesquisar(event)">
-                    <label>Nome da Receita:</label>
-                    <input type="text" name="busca">
-                    <button type="submit" class="borda-neon-azul-hover">Buscar</button>
-                </form>
+        <main>
+            <div id="receitas" class="receitas-section max-width">
+                <div class="busca-receitas-container max-width">
+                    <form onsubmit="pesquisar(event)">
+                        <label>Nome da Receita:</label>
+                        <input type="text" name="busca" />
+                        <button type="submit" class="borda-neon-azul-hover">Buscar</button>
+                    </form>
+                </div>
+                <div class="receitas-container"></div>
+                <div class="botao-mais-receitas-container">
+                    <button id="mais-botao" class="botao-mais-receitas borda-neon-azul-hover" onclick="renderizarDrinks()">Mais Receitas</button>
+                </div>
             </div>
-            <div class="receitas-container"></div>
-            <div class="botao-mais-receitas-container">
-                <button id="mais-botao" class="botao-mais-receitas borda-neon-azul-hover" onclick="renderizarDrinks()">Mais Receitas</button>
         </main>
     </body>
 </html>

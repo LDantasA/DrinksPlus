@@ -38,11 +38,11 @@ async function renderizarDrinks() {
         const receitasContainer = document.getElementsByClassName("receitas-container")[0];
         receitasContainer.insertAdjacentHTML('beforeend', `
         <div class="receita-card">
-        <button id="${receita.idDrink}" class="favorito-botao favorito-botao-${favoritado}"></button>
-        <a href="receita.html?id=${receita.idDrink}">
-        <img src="${receita.strDrinkThumb}/large" alt="Foto do drink">
-            <h3 class="receita-titulo">${receita.strDrink}</h3>
-        </a>
+            <button id="${receita.idDrink}" class="favorito-botao favorito-botao-${favoritado}"></button>
+            <a href="receita.html?id=${receita.idDrink}">
+            <img src="${receita.strDrinkThumb}/large" alt="Foto do drink">
+                <h3 class="receita-titulo">${receita.strDrink}</h3>
+            </a>
         </div>`);
         adicionarEventoBotaoFavorito(receita);
     });
@@ -180,22 +180,22 @@ function renderizarInstrucoes(instrucoesString) {
 }
 
 async function traduzir(textoIngles) {
-    // Essa api tem limite de uso, então desabilitei ela por segurança
     try {
-        // const response = await fetch('https://translation.googleapis.com/language/translate/v2?key=', {
-        //     method: "POST",
-        //     body: JSON.stringify({
-        //         q: textoIngles,
-        //         target: 'pt-BR',
-        //         source: 'en',
-        //         format: 'text'
-        //     })
-        // });
+        const response = await fetch('https://translation.googleapis.com/language/translate/v2?key=AIzaSyAmqmn5etZURoc6JZykrPhycRRo7QMyvV8', {
+            method: "POST",
+            body: JSON.stringify({
+                q: textoIngles,
+                target: 'pt-BR',
+                source: 'en',
+                format: 'text'
+            })
+        });
         const { data } = await response.json();
+        console.log(data);
         const textoTraduzido = data.translations.map(({ translatedText }) => translatedText);
         return textoTraduzido;
     } catch (error) {
-        console.warn('Tradução falhou 😭');
+        console.log('Tradução falhou 😭');
         return textoIngles;
     }
 }
