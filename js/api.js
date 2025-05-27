@@ -137,11 +137,9 @@ async function renderizarIngredientes(ingredientes, receita) {
     const ingredientesContainer = document.getElementById("ingredientes");
     for (let i = 0; ingredientes[i]; i++) {
         ingredientesContainer.innerHTML += `
-            <div id="ingredientes" class="ingredientes-container">
-                <div class="ingrediente-card borda-neon-rosa-hover">
-                <img src="https://www.thecocktaildb.com/images/ingredients/${receita[`strIngredient${i + 1}`]}-small.png" alt="Imagem do ingrediente">
-                <p>${ingredientes[i]}</p>
-            </div>`;
+            <div class="ingrediente-card borda-neon-rosa-hover">
+            <img src="https://www.thecocktaildb.com/images/ingredients/${receita[`strIngredient${i + 1}`]}-small.png" alt="Imagem do ingrediente">
+            <p>${ingredientes[i]}</p>`;
     }
 }
 

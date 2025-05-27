@@ -36,12 +36,20 @@
     height: auto;
 }
 
+.grid-lines {
+    background-image:
+        linear-gradient(to right, rgba(0, 247, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 247, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
 .intro-transicao {
-    position: absolute;
-    /* feito assim para ficar igual no Edge e no Chrome */
-    margin-top: calc(100vh - 80px);
+    position: relative;
+    /* o margin está feito assim para ficar igual no Edge e no Chrome */
     width: 100vw;
     height: 80px;
+    margin-left: -15px;
+    margin-top: -79px;
     background: linear-gradient(to bottom, transparent, black);
 }
 
@@ -59,9 +67,43 @@
     text-align: center;
 }
 
-.grid-lines {
-    background-image:
-        linear-gradient(to right, rgba(0, 247, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 247, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
+
+.receitas-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 500px));
+    gap: 32px;
+}
+
+@media (max-width: 950px) {
+    .intro-container {
+        flex-direction: column;
+        padding-top: 130px;
+        min-height: 100vh;
+        max-height: 1000px;
+    }
+
+    .intro-texto-container {
+        max-width: 100%;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .intro-imagem-container {
+        top: 25px;
+        filter: drop-shadow(0 0 20px #00f7ff);
+    }
+
+    .receitas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 55px;
+    }
 }

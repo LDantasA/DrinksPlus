@@ -132,7 +132,7 @@ h3 {
 
 .receitas-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
 }
 
@@ -144,6 +144,7 @@ h3 {
     transition: all 0.3s ease;
     background-color: #101828;
     border-radius: 8px;
+    margin: auto;
 }
 
 .receita-card:hover {
@@ -279,4 +280,57 @@ select:focus {
         linear-gradient(to bottom, rgba(0, 247, 255, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: center;
+}
+
+.menu-hamburguer {
+    display: none;
+    width: 90px;
+    height: 90px;
+    background: none;
+    padding: 0;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    nav a,
+    nav button {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    nav {
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        flex-direction: column;
+        align-items: center;
+        background: #101828;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        box-shadow: 0 8px 24px #000a;
+        z-index: 10;
+        padding: 20px 0 10px 0;
+        gap: 12px;
+        transition: 0.5s;
+    }
+
+    .menu-ativo {
+        display: flex;
+        opacity: 1;
+        pointer-events: unset;
+    }
 }

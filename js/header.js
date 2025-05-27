@@ -35,5 +35,13 @@ function sair() {
     window.location.reload();
 }
 
-document.addEventListener('DOMContentLoaded', exibirBotaoUsuario);
+document.addEventListener('DOMContentLoaded', function () {
+    exibirBotaoUsuario();
+
+    const botaoHamb = document.getElementById('menu-hamburguer');
+    botaoHamb.addEventListener('click', () => {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('menu-ativo');
+    });
+});
 

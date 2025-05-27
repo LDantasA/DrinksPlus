@@ -4,20 +4,33 @@ body {
     background-position: center;
 }
 
-.receitas-section {
-    position: relative;
-    overflow: hidden;
+.busca-receitas-container form {
+    margin: 25px;
 }
 
-.busca-receitas-container {
-    padding: 130px 0;
-    margin: 0 auto;
+.busca-receitas-container form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-label {
+.busca-receitas-container form label {
     font-size: 24px;
 }
 
-form * {
-    margin-right: 10px;
+.busca-receitas-container form input {
+    margin: 0;
+}
+
+.receitas-section {
+    position: relative;
+    margin-top: 130px;
+}
+
+@media (max-width: 750px) {
+    .busca-receitas-container form * {
+        width: 100%;
+    }
 }
