@@ -1,0 +1,177 @@
+/* Só pra ter a animaçãozinha quando mostrar a responsividade */
+* {
+    transition: 0.8s;
+}
+
+main {
+    margin: 0 15px 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-imagem-container {
+    position: fixed;
+}
+
+.drink-imagem {
+    width: 50vw;
+    max-width: 700px;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.drink-imagem:hover {
+    box-shadow: 0 0 30px #00f0ff;
+}
+
+.titulo-descricao-container {
+    height: 100vh;
+    width: 50vw;
+    max-width: 700px;
+    min-width: 240px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: calc(-100vh - 3px);
+    background: linear-gradient(to top, black, transparent 50%);
+    /* background: rgba(128, 0, 128, 0.419); */
+}
+
+.recipiente {
+    margin-bottom: 0;
+    color: #ccc;
+}
+
+.receita-container {
+    width: 45vw;
+    max-width: 700px;
+    padding-top: 130px;
+    margin: 0 0 0 auto;
+}
+
+.ingredientes-titulo {
+    margin-bottom: 20px
+}
+
+.ingredientes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 15px;
+}
+
+.ingrediente-card {
+    min-height: 160px;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgb(247, 0, 113, 0.5);
+    transition: 0.3s;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+
+.ingrediente-card:hover {
+    box-shadow: 0 0 20px #f70071;
+}
+
+.ingrediente-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.ingrediente-card p {
+    margin: 0;
+}
+
+.instrucoes-titulo {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.instrucoes {
+    text-align: left;
+    max-width: 700px;
+    border-radius: 12px;
+    margin: 0 15px;
+}
+
+.instrucoes ol {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.instrucoes ol li {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #f70071;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 6px;
+    transition: 0.5s;
+    list-style-position: inside;
+    font-size: 24px;
+}
+
+.instrucoes ol li:hover {
+    background: rgba(247, 0, 113, 0.12);
+}
+
+.voltar-botao-container {
+    display: flex;
+    justify-content: center;
+    right: 0;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo-imagem-container {
+        position: static;
+        width: 100%;
+        padding-top: 110px;
+    }
+
+    .drink-imagem {
+        width: 100vw;
+        min-width: unset;
+        height: calc(100vh - 110px);
+    }
+
+    .titulo-descricao-container {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        max-width: 100%;
+        height: 50vh;
+        margin-top: 0;
+        background: linear-gradient(to top, black, transparent 80%);
+    }
+
+    .receita-container {
+        width: 100vw;
+        max-width: 100%;
+        padding-top: 24px;
+        margin: 0 15px;
+        text-align: center;
+    }
+}

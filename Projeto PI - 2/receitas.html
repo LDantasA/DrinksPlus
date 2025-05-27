@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Receitas - DrinksPlus</title>
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/receitas.css">
+        <script src="./js/header.js" defer></script>
+        <script src="./js/api.js" defer></script>
+    </head>
+    <body onload="renderizarDrinks()">>
+        <header class="borda-neon-azul">
+            <div class="menu-container max-width">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo da Empresa" />
+                </a>
+                <button class="menu-hamburguer" id="menu-hamburguer">
+                    <img src="./img/menu_icone.svg" alt="menu" />
+                </button>
+                <nav id="nav">
+                    <a href="index.html">Início</a>
+                    <a href="receitas.html">Receitas</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="equipe.html">Equipe</a>
+                    <a href="login.html" id="login-botao">
+                        <button type="button" class="botao-login borda-neon-rosa-hover">Login</button>
+                    </a>
+                    <div id="usuario-botao-container" class="usuario-botao-container">
+                        <a href="#" id="usuario-botao">
+                            <img src="./img/account_circle.svg" style="height: 50px" />
+                        </a>
+                        <div id="usuario-menu" class="usuario-menu usuario-menu-escondido">
+                            <a href="favoritos.html">Favoritos</a>
+                            <a href="perfil.html">Editar Perfil</a>
+                            <a href="#" id="logout">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="receitas" class="receitas-section">
+            <div class="busca-receitas-container max-width">
+                <form onsubmit="pesquisar(event)">
+                    <label>Nome da Receita:</label>
+                    <input type="text" name="busca">
+                    <button type="submit" class="borda-neon-azul-hover">Buscar</button>
+                </form>
+            </div>
+            <div class="receitas-container"></div>
+            <div class="botao-mais-receitas-container">
+                <button id="mais-botao" class="botao-mais-receitas borda-neon-azul-hover" onclick="renderizarDrinks()">Mais Receitas</button>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DrinksPlus</title>
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/home.css" />
+        <script src="./js/header.js" defer></script>
+    </head>
+
+    <body>
+        <header class="borda-neon-azul">
+            <div class="menu-container max-width">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo da Empresa" />
+                </a>
+                <button class="menu-hamburguer" id="menu-hamburguer">
+                    <img src="./img/menu_icone.svg" alt="menu" />
+                </button>
+                <nav id="nav">
+                    <a href="index.html">Início</a>
+                    <a href="receitas.html">Receitas</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="equipe.html">Equipe</a>
+                    <a href="login.html" id="login-botao">
+                        <button type="button" class="botao-login borda-neon-rosa-hover">Login</button>
+                    </a>
+                    <div id="usuario-botao-container" class="usuario-botao-container">
+                        <a href="#" id="usuario-botao">
+                            <img src="./img/account_circle.svg" style="height: 50px" />
+                        </a>
+                        <div id="usuario-menu" class="usuario-menu usuario-menu-escondido">
+                            <a href="favoritos.html">Favoritos</a>
+                            <a href="perfil.html">Editar Perfil</a>
+                            <a href="#" id="logout">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="intro-section-container">
+                <!-- <div class="particulas"></div> -->
+                <div class="intro-container max-width">
+                    <div class="intro-texto-container">
+                        <h1 class="texto-neon">Um brinde à <span class="destaque">criatividade</span>!</h1>
+                        <p>Aqui, criatividade é o ingrediente principal. Descubra combinações únicas e surpreenda-se com drinks que têm atitude e estilo — como você.</p>
+                        <a href="#receitas">
+                            <button class="borda-neon-azul-hover">Conheça nossas receitas</button>
+                        </a>
+                    </div>
+                    <div class="intro-imagem-container">
+                        <img src="./img/drink-intro.png" alt="" />
+                    </div>
+                </div>
+            </section>
+            <div class="intro-transicao"></div>
+            <br />
+            <section id="receitas" class="receitas-section">
+                <div class="mais-populares-container max-width">
+                    <div class="mais-populares-titulo-container">
+                        <h2>Receitas Mais <span class="destaque">Populares</span></h2>
+                        <p>Dos clássicos que nunca saem de moda aos mais populares do momento, <br />aqui você encontra as receitas que conquistam paladares ao redor do mundo.</p>
+                    </div>
+                    <div class="receitas-container">
+                        <div class="receita-card">
+                            <a href="receita.html?id=11202">
+                                <img src="https://www.thecocktaildb.com/images/media/drink/jgvn7p1582484435.jpg/large" alt="Foto do drink" />
+                                <h3 class="receita-titulo">Caipirinha</h3>
+                            </a>
+                        </div>
+                        <div class="receita-card">
+                            <a href="receita.html?id=11000">
+                                <img
+                                    src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg/large"
+                                    alt="Foto do drink Mojito em um copo de vidro, decorado com folhas de hortelã."
+                                />
+                                <h3 class="receita-titulo">Mojito</h3>
+                            </a>
+                        </div>
+                        <div class="receita-card">
+                            <a href="receita.html?id=11001">
+                                <img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg/large" alt=" " />
+                                <h3 class="receita-titulo">Old Fashioned</h3>
+                            </a>
+                        </div>
+                        <div class="receita-card">
+                            <a href="receita.html?id=11002">
+                                <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg/large" alt="" />
+                                <h3 class="receita-titulo">Long Island Tea</h3>
+                            </a>
+                        </div>
+                        <div class="receita-card">
+                            <a href="receita.html?id=11003">
+                                <img src="https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg/large" alt="" />
+                                <h3 class="receita-titulo">Negroni</h3>
+                            </a>
+                        </div>
+                        <div class="receita-card">
+                            <a href="receita.html?id=11004">
+                                <img src="https://www.thecocktaildb.com/images/media/drink/hbkfsh1589574990.jpg/large" alt="" />
+                                <h3 class="receita-titulo">Whiskey Sour</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="botao-mais-receitas-container">
+                        <a href="receitas.html"><button class="botao-mais-receitas borda-neon-azul-hover">Mais Receitas</button></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

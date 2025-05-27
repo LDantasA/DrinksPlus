@@ -1,0 +1,36 @@
+body {
+    background-image: linear-gradient(to right, rgba(0, 247, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 247, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+.busca-receitas-container form {
+    margin: 25px;
+}
+
+.busca-receitas-container form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.busca-receitas-container form label {
+    font-size: 24px;
+}
+
+.busca-receitas-container form input {
+    margin: 0;
+}
+
+.receitas-section {
+    position: relative;
+    margin-top: 130px;
+}
+
+@media (max-width: 750px) {
+    .busca-receitas-container form * {
+        width: 100%;
+    }
+}

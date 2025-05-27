@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro - DrinksPlus</title>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/login.css" />
+        <script src="./js/cadastro.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <img src="img/Logo.png" alt="Logo" class="logo-img" />
+            <form id="registro" class="form-size">
+                <div class="linha">
+                    <div class="nome-input">
+                        <label class="titulo">Nome*</label>
+                        <input name="nome" type="text" required class="input-size input-text" />
+                    </div>
+                    <div>
+                        <label>Nascimento*</label>
+                        <input type="date" name="nascimento" />
+                    </div>
+                </div>
+
+                <label class="titulo">Email*</label>
+                <input name="email" type="email" required class="input-size input-text" />
+
+                <label class="titulo">Senha*</label>
+                <input name="senha" type="password" required class="input-size input-text" />
+
+                <label class="titulo">Telefone*</label>
+                <input name="telefone" type="text" class="input-size input-text" />
+                <button type="submit" class="borda-neon-azul-hover">Cadastrar</button>
+                <!-- <button type="button" id="login-button" class="input-size login-button">Entrar</button> -->
+            </form>
+        </main>
+    </body>
+</html>

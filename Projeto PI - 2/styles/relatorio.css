@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/1200x/3b/49/9c/3b499c48ec0708a669ce1623a4f670a9.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.relatorio-container {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2111);
+  margin-top: 100px;
+  width: 100%;
+  height: 75vh;
+  overflow-y: auto;
+  padding: 20px;
+}

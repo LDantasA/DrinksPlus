@@ -1,0 +1,73 @@
+main {
+    padding-top: 130px;
+}
+
+.equipe-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin: auto;
+}
+
+.membro-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px, solid, rgba(0, 247, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.membro-card:hover {
+    border-color: rgba(0, 247, 255, 1);
+    color: #00f7ff;
+}
+
+.membro-imagem-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.membro-imagem {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s;
+    display: block;
+}
+
+.membro-card:hover .membro-imagem {
+    transform: scale(1.10);
+}
+
+.membro-gradiente {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000, transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.membro-card:hover .membro-gradiente {
+    opacity: 0.7;
+}
+
+.membro-info {
+    padding: 1.5rem;
+}
+
+.membro-nome {
+    font-weight: 500;
+}
+
+#antonio {
+    object-position: top;
+}

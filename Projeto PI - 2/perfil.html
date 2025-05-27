@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - DrinksPlus</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/perfil.css" />
+    <script src="./js/perfil.js" defer></script>
+  </head>
+  <body onload="obterDadosUsuarios()">
+    <div class="perfil-container">
+      <div class="perfil-section">
+        <div class="perfil-imagem borda-neon-azul"></div>
+        <input type="file" id="uploadFoto" accept="image/*" hidden />
+        <!-- <label for="uploadFoto" class="upload">Alterar foto</label> -->
+      </div>
+      <form id="perfil">
+        <fieldset>
+          <legend>Informações pessoais</legend>
+          <div class="linha">
+            <div>
+              <label>Nome*</label>
+              <input type="text" name="nome" required />
+            </div>
+            <div>
+              <label>Data de nascimento*</label>
+              <input type="date" name="nascimento" required />
+            </div>
+            <div>
+              <label>Nacionalidade*</label>
+              <select name="nacionalidade">
+                <option value="br">Brasil</option>
+                <option value="cn">China</option>
+                <option value="us">Estados Unidos</option>
+                <option value="fr">França</option>
+                <option value="pt">Guiana Brasileira</option>
+                <option value="it">Itália</option>
+                <option value="jp">Japão</option>
+                <option value="uk">Reino Unido</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações de contato</legend>
+          <div class="linha">
+            <div>
+              <label>Email*</label>
+              <input type="email" name="email" required />
+            </div>
+            <div>
+              <label>Telefone</label>
+              <input type="tel" name="telefone" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Senha</legend>
+          <div class="linha">
+            <div>
+              <label>Senha Atual*</label>
+              <input type="password" name="senhaAtual" required />
+            </div>
+            <div>
+              <label>Nova Senha</label>
+              <input type="password" name="senha" />
+            </div>
+        </fieldset>
+        <button type="submit" class="borda-neon-azul-hover">Salvar Alterações</button>
+      </form>
+    </div>
+  </body>
+</html>

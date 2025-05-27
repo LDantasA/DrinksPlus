@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Receita - DrinksPlus</title>
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/receita.css" />
+        <script src="./js/header.js" defer></script>
+        <script src="./js/api.js" defer></script>
+    </head>
+    <body class="fundo-azul" onload="renderizarReceita()">
+        <header class="borda-neon-azul">
+            <div class="menu-container max-width">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo da Empresa" />
+                </a>
+                <button class="menu-hamburguer" id="menu-hamburguer">
+                    <img src="./img/menu_icone.svg" alt="menu" />
+                </button>
+                <nav id="nav">
+                    <a href="index.html">Início</a>
+                    <a href="receitas.html">Receitas</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="equipe.html">Equipe</a>
+                    <a href="login.html" id="login-botao">
+                        <button type="button" class="botao-login borda-neon-rosa-hover">Login</button>
+                    </a>
+                    <div id="usuario-botao-container" class="usuario-botao-container">
+                        <a href="#" id="usuario-botao">
+                            <img src="./img/account_circle.svg" style="height: 50px" />
+                        </a>
+                        <div id="usuario-menu" class="usuario-menu usuario-menu-escondido">
+                            <a href="favoritos.html">Favoritos</a>
+                            <a href="perfil.html">Editar Perfil</a>
+                            <a href="#" id="logout">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="max-width">
+            <div class="titulo-imagem-container">
+                <img id="drink-imagem" class="drink-imagem" alt="Foto do drink" src="" />
+                <div class="titulo-descricao-container">
+                    <p id="recipiente" class="recipiente"></p>
+                    <h1 id="titulo" class="titulo"></h1>
+                </div>
+            </div>
+            <div class="receita-container">
+                <h2 class="ingredientes-titulo">Ingredientes</h2>
+                <div id="ingredientes" class="ingredientes-container"></div>
+                <h2 class="instrucoes-titulo">Modo de Preparo</h2>
+                <div class="instrucoes">
+                    <ol id="instrucoes"></ol>
+                </div>
+                <div class="voltar-botao-container">
+                    <a href="receitas.html"><button type="button" class="borda-neon-azul-hover">Voltar para Receitas</button></a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

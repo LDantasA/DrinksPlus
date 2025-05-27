@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Favoritos - DrinksPlus</title>
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/favoritos.css" />
+        <script src="./js/header.js" defer></script>
+        <script src="./js/favoritos.js" defer></script>
+        <!-- <script src="./js/api.js" defer></script> -->
+    </head>
+    <body onload="renderizarDrinks()">
+        <header class="borda-neon-azul">
+            <div class="menu-container max-width">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo da Empresa" />
+                </a>
+                <button class="menu-hamburguer" id="menu-hamburguer">
+                    <img src="./img/menu_icone.svg" alt="menu" />
+                </button>
+                <nav id="nav">
+                    <a href="index.html">Início</a>
+                    <a href="receitas.html">Receitas</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="equipe.html">Equipe</a>
+                    <a href="login.html" id="login-botao">
+                        <button type="button" class="botao-login borda-neon-rosa-hover">Login</button>
+                    </a>
+                    <div id="usuario-botao-container" class="usuario-botao-container">
+                        <a href="#" id="usuario-botao">
+                            <img src="./img/account_circle.svg" style="height: 50px" />
+                        </a>
+                        <div id="usuario-menu" class="usuario-menu usuario-menu-escondido">
+                            <a href="favoritos.html">Favoritos</a>
+                            <a href="perfil.html">Editar Perfil</a>
+                            <a href="#" id="logout">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="receitas" class="receitas-section">
+            <h1>Drinks <span class="destaque">Favoritos</span></h1>
+            <div class="receitas-container"></div>
+        </main>
+    </body>
+</html>

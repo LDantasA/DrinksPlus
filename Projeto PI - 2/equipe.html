@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Equipe - DrinksPlus</title>
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/equipe.css" />
+        <script src="./js/header.js" defer></script>
+    </head>
+
+    <body class="fundo-azul">
+        <header class="borda-neon-azul">
+            <div class="menu-container max-width">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo da Empresa" />
+                </a>
+                <button class="menu-hamburguer" id="menu-hamburguer">
+                    <img src="./img/menu_icone.svg" alt="menu" />
+                </button>
+                <nav id="nav">
+                    <a href="index.html">Início</a>
+                    <a href="receitas.html">Receitas</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="equipe.html">Equipe</a>
+                    <a href="login.html" id="login-botao">
+                        <button type="button" class="botao-login borda-neon-rosa-hover">Login</button>
+                    </a>
+                    <div id="usuario-botao-container" class="usuario-botao-container">
+                        <a href="#" id="usuario-botao">
+                            <img src="./img/account_circle.svg" style="height: 50px" />
+                        </a>
+                        <div id="usuario-menu" class="usuario-menu usuario-menu-escondido">
+                            <a href="favoritos.html">Favoritos</a>
+                            <a href="perfil.html">Editar Perfil</a>
+                            <a href="#" id="logout">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="equipe">
+            <div class="container">
+                <div class="equipe-header">
+                    <h2 class="equipe-titulo texto-neon">Nossa <span class="destaque">Equipe</span></h2>
+                </div>
+                <div class="equipe-grid max-width">
+                    <div class="membro-card">
+                        <div class="membro-imagem-container">
+                            <img src="./img/Antonio.jpeg" alt="Antonio" id="antonio" class="membro-imagem" />
+                            <div class="membro-gradiente"></div>
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome text-primary">Antonio</h3>
+                        </div>
+                    </div>
+                    <div class="membro-card">
+                        <div class="membro-imagem-container">
+                            <img src="./img/Celso.jpg" alt="Celso" class="membro-imagem" />
+                            <div class="membro-gradiente"></div>
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome text-primary">Celso</h3>
+                        </div>
+                    </div>
+                    <div class="membro-card">
+                        <div class="membro-imagem-container">
+                            <img src="./img/Kallry.jpeg" alt="Kallry" class="membro-imagem" />
+                            <div class="membro-gradiente"></div>
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome text-primary">Kallry</h3>
+                        </div>
+                    </div>
+                    <div class="membro-card">
+                        <div class="membro-imagem-container">
+                            <img src="./img/Leo.png.jpg" alt="Leonardo" class="membro-imagem" />
+                            <div class="membro-gradiente"></div>
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome text-primary">Leonardo</h3>
+                        </div>
+                    </div>
+                    <div class="membro-card">
+                        <div class="membro-imagem-container">
+                            <img src="./img/Werick.jpg" alt="Werick" class="membro-imagem" />
+                            <div class="membro-gradiente"></div>
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome text-primary">Werick</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
